@@ -35,6 +35,16 @@ class Carousel extends React.Component {
     );
   }
 
+  slideCarousel(direction) {
+    this.setState({
+      itemList: itemList.currentPage = direction ? itemList.currentPage + 1 : itemList.currentPage - 1
+    });
+    //pageCount = Math.ceil(itemList.length / itemList.itemsPerPage);
+    startIndex = itemList.itemsPerPage * itemList.currentPage
+    endIndex = startIndex + itemList.itemsPerPage
+    itemList.slice(startIndex, endIndex).scrollIntoView({behavior: 'smooth'});
+  }
+
   
 }
 
