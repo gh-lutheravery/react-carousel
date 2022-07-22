@@ -45,6 +45,14 @@ class Carousel extends React.Component {
     itemList.slice(startIndex, endIndex).scrollIntoView({behavior: 'smooth'});
   }
 
+  render() {
+    return (
+      <div id="carousel-container">
+        <h1 id="carousel-title">Carousel Widget</h1>
+      </div>
+    );
+  }
+
   
 }
 
