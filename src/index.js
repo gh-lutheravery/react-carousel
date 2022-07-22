@@ -15,6 +15,15 @@ class Carousel extends React.Component {
       pageNum: 0
     };
   }
+
+  initPaginatedList() {
+    let nameList = Array(LISTCOUNT).fill(null);
+    let tally = 0;
+    nameList.forEach(element => {
+      tally++;
+      element = "Image".concat(tally)
+    });
+  }
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
