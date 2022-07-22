@@ -49,6 +49,9 @@ class Carousel extends React.Component {
     return (
       <div id="carousel-container">
         <h1 id="carousel-title">Carousel Widget</h1>
+        <Container itemList={this.state.itemList}/>
+        <Arrow direction="backward" onClick={(direction) => this.slideCarousel(direction)}/>
+        <Arrow direction="forward" onClick={(direction) => this.slideCarousel(direction)}/>
       </div>
     );
   }
