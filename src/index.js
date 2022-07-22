@@ -65,6 +65,14 @@ function Container(props) {
   );
 }
 
+function Item(props) {
+  return (
+    <li>
+      <span class="item">{this.props.name}</span>
+    </li>
+  );
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
