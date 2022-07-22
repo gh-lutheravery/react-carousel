@@ -23,7 +23,19 @@ class Carousel extends React.Component {
       tally++;
       element = "Image".concat(tally)
     });
+
+    return (
+      <PaginatedList
+        list={nameList}
+        itemsPerPage={ITEMSPERPAGECOUNT}
+        renderList={(list) => (
+          <Item/>
+        )}
+      />
+    );
   }
+
+  
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
