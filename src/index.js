@@ -55,8 +55,14 @@ class Carousel extends React.Component {
       </div>
     );
   }
+}
 
-  
+function Container(props) {
+  return (
+    <ul>
+      {this.props.itemList}
+    </ul>
+  );
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
