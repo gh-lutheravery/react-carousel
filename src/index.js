@@ -73,6 +73,13 @@ function Item(props) {
   );
 }
 
+function Arrow(props) {
+  return (
+    <button className={this.props.direction} onClick={props.onClick}>
+    </button>
+  );
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
