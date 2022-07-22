@@ -28,9 +28,13 @@ class Carousel extends React.Component {
       <PaginatedList
         list={nameList}
         itemsPerPage={ITEMSPERPAGECOUNT}
-        renderList={(list) => (
-          <Item/>
-        )}
+        renderList={(list) => {
+
+          list.map((itemName) => {
+            <Item name={itemName}/>
+          })
+          
+        }}
       />
     );
   }
@@ -49,7 +53,7 @@ class Carousel extends React.Component {
     return (
       <div id="carousel-container">
         <h1 id="carousel-title">Carousel Widget</h1>
-        <Container itemList={this.state.itemList}/>
+        <Container itemList={this.state.itemList.renderList()}/>
         <Arrow direction="backward" onClick={(direction) => this.slideCarousel(direction)}/>
         <Arrow direction="forward" onClick={(direction) => this.slideCarousel(direction)}/>
       </div>
