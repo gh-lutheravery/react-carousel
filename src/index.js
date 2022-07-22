@@ -6,16 +6,6 @@ var LISTCOUNT = 30;
 var ITEMSPERPAGECOUNT = 30;
 
 class Carousel extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      itemList: [{
-        items: initPaginatedList()
-      }],
-      pageNum: 0
-    };
-  }
-
   initPaginatedList() {
     let nameList = Array(LISTCOUNT).fill(null);
     let tally = 0;
@@ -37,6 +27,16 @@ class Carousel extends React.Component {
         }}
       />
     );
+  }
+  
+  constructor(props) {
+    super(props);
+    this.state = {
+      itemList: [{
+        items: initPaginatedList()
+      }],
+      pageNum: 0
+    };
   }
 
   slideCarousel(direction) {
