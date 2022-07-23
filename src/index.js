@@ -36,7 +36,7 @@ class Carousel extends React.Component {
     super(props);
     this.state = {
       itemList: [{
-        items: initPaginatedList()
+        items: this.initPaginatedList()
       }],
       pageNum: 0,
       viewPortStartIndex: 0,
