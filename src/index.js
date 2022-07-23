@@ -57,7 +57,7 @@ class Carousel extends React.Component {
         viewPortEndIndex: this.state.viewPortStartIndex + this.state.itemList.itemsPerPage
     });
 
-    itemList.slice(startIndex, endIndex).scrollIntoView({behavior: 'smooth'});
+    ViewPortItems.slideAnimate();
   }
 
   render() {
