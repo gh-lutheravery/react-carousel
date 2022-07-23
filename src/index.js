@@ -6,7 +6,8 @@ import { PaginatedList } from 'react-paginated-list';
 
 var LISTCOUNT = 30;
 var ITEMSPERPAGECOUNT = 30;
-
+var BACKWARD = "backward"; 
+var FORWARD = "forward";
 class Carousel extends React.Component {
   initPaginatedList() {
     let nameList = Array(LISTCOUNT).fill(null);
