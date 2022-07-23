@@ -21,13 +21,13 @@ class Carousel extends React.Component {
       <PaginatedList
         list={nameList}
         itemsPerPage={ITEMSPERPAGECOUNT}
-        renderList={(list) => {
-
-          list.map((itemName) => {
-            <Item name={itemName}/>
-          })
-          
-        }}
+        renderList={(list) => (
+          <ul>
+          {list.map((itemName) => {
+            return (<Item name={itemName}/>);
+          })}
+          </ul>
+        )}
       />
     );
   }
