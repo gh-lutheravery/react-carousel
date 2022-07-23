@@ -38,7 +38,9 @@ class Carousel extends React.Component {
       itemList: [{
         items: initPaginatedList()
       }],
-      pageNum: 0
+      pageNum: 0,
+      viewPortStartIndex: 0,
+      viewPortEndIndex: 7
     };
   }
 
