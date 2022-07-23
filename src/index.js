@@ -97,7 +97,7 @@ function Item(props) {
 
 function Arrow(props) {
   return (
-    <button className={this.props.direction} onClick={props.onClick}>
+    <button className={props.direction} onClick={props.onClick}>
     </button>
   );
 }
