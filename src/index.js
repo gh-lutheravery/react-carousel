@@ -45,14 +45,18 @@ class Carousel extends React.Component {
   }
 
   slideCarousel(direction) {
+    let itemListCopy = this.state.itemList.slice();
     if (direction === FORWARD)
       itemListCopy.currentPage = this.stateitemList.currentPage + 1;
     else if (direction === BACKWARD)
       itemListCopy.currentPage = this.stateitemList.currentPage - 1;
 
-    //pageCount = Math.ceil(itemList.length / itemList.itemsPerPage);
-    startIndex = itemList.itemsPerPage * itemList.currentPage
-    endIndex = startIndex + itemList.itemsPerPage
+    this.setState({
+        itemList: itemListCopy,
+        viewPortStartIndex: this.state.itemList.itemsPerPage * this.state.itemList.currentPage,
+        viewPortEndIndex: this.state.viewPortStartIndex + this.state.itemList.itemsPerPage
+    });
+
     itemList.slice(startIndex, endIndex).scrollIntoView({behavior: 'smooth'});
   }
 
