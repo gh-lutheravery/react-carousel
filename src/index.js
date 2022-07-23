@@ -74,12 +74,17 @@ class Carousel extends React.Component {
   }
 }
 
-function Container(props) {
+function ViewPortItems(props) {
+  let viewPortRef = React.createRef();
   return (
-    <ul>
-      {this.props.itemList}
-    </ul>
+    <React.Fragment ref={viewPortRef}>
+      {props.items}
+    </React.Fragment>
   );
+
+  function slideAnimate() {
+    viewPortRef.current.scrollIntoView({behavior: 'smooth'});
+  }
 }
 
 function Item(props) {
